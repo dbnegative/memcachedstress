@@ -47,9 +47,11 @@ func connectMemcache(host string, port string, key string, value string) {
 
 		if err != nil {
 			log.Printf("Process(%s) ERROR: Could not find key: %v ", value, err)
+			err = nil //reset error
+		} else {
+			log.Printf("Process(%s) Found Key: %s with value: %s ..sleep %d seconds", value, key, value, *timeout/1000)
 		}
 
-		log.Printf("Process(%s) Found Key: %s with value: %s ..sleep %d seconds", value, key, value, *timeout/1000)
 		time.Sleep(1 * time.Second)
 	}
 }
