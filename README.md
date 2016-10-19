@@ -22,6 +22,6 @@ Usage of ./memcachedstress:
 
 example
 -------
-mecachedstress -host=localhost -port=11211 -conn_num-500 -duration=30
+memcachedstress -host=localhost -port=11211 -conn_num-500 -duration=30
 
 ```
